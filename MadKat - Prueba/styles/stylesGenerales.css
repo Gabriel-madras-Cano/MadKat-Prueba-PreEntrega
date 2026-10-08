@@ -1,0 +1,410 @@
+
+/*Variables Globales*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{ /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #000000;
+}
+a {
+    text-decoration: none;
+    color: inherit; /* El enlace adopta el color del texto que lo rodea */
+}
+
+ul, ol {
+    list-style: none; /* Quita los puntitos y números de las listas */
+}
+
+/*Fuentes...*/
+
+.metal-mania-title, h1, .mk {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+ p, h2, h3, li, .nav-enlaces{
+  font-family: "Federo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fjalla-one-regular, .btn, .card-title {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*Variables locales*/
+
+.header-contenedor { /*Color del fondo y espacio entre elementos dentro del header*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-image: url(/img/logo/madkat-net.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*mediaqueries*/
+
+@media (max-width: 857px) {
+    .header-contenedor {
+        padding: 1rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-enlaces {
+        margin: 1.5rem 1rem;
+    }
+
+    .contenedor-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2fr, 1fr));
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+}   
+
+.title{ /*Color del título y tamaño */
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.nav-enlaces{ /*Espaciado entre los enlaces, color y efecto negrita */
+    margin: 0 10px;
+    color: #d7166f;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.activo{
+    color: #9a9a9a; /* Enlace de la página actual */
+}
+.nav-enlaces:hover { /* Aumenta el tamaño del texto al pasar el mouse */
+    color: #f63274;
+    transform: scale(1.25);
+}
+/*Color del texto y otros efectos */
+.texto{
+    color: #ffffff;
+    margin: 1rem 2.5rem;
+    font-size: 1.2rem;
+}
+.resaltar{
+    color: #d7166f;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.subtitle{ 
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+ /*Diseño del main y la tarjeta de los productos*/
+
+.contenedor-main{ /*Hacemos un diseño responsivo para los productos en las tarjetas*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/*Diseño del espacio de publicidad y otros aspectos*/
+.contenedor-publicidad{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.item-link{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+.img-tarjeta{ /*Adapta la imagen a la tarjeta de la tienda*/
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem 0;
+    height: auto;
+    border-radius: 0.5rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.img-tarjeta:hover{ /*Agregamos una pequeña animación al pasar el mouse sobre la imagen*/
+    border: 2px solid #9a9a9a;
+    transform: scale(1.1);
+}
+
+.card-fondo{
+    background-color: #4a4a4a;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.btn{ /*Cambiamos un poco el diseño de los botones que tenia boostrap por defecto*/
+    background-color: #f63274;
+    border: none;
+    color: #ede2e2;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+.btn:hover{ /*Agregamos una ligera animación a los botones también...*/
+    background-color: #d7166f;
+    color: rgb(44, 37, 37);
+    transform: scale(1.2);
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+/*Fin de la edición para las tarjets y los botones*/
+/*Pequeña sessión para la parte de la publicidad de transporte*/
+.contenedor-aviso-envios{
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img-logo-transporte{
+    width: 100%;
+    border-radius: 50%;
+    max-width: 100px;
+    height: 100px;
+}
+
+/*Diseño de la sección de comentarios*/
+.comentarios-header{
+    font-size: 1.6rem;
+    margin: 2rem 1rem;
+}
+.contenedor-comentarios{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 1rem 2.5rem;
+}
+.card-fondo-comentarios{ /*diseño de los comentarios*/
+    background-color: #4a4a4a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 0;
+    width: 85%;
+}
+.card-img-user{ /*diseño para los logos de los usuarios en los cometarios*/
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+/*Media Queries*/
+@media (max-width: 680px) {
+    .contenedor-comentarios {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-img-user {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+        margin: 0.5rem;
+    }
+    .card-fondo-comentarios {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*Fin de las media queries y de los diseños para los comentarios*/
+
+.linea{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #9a9a9a;
+}
+
+/*Variables del footer*/
+.footer { /*Color del fondo y espacio entre elementos dentro del footer*/
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    margin-top: auto;
+    padding: 1.5rem;
+}
+
+/*Diseño de la página de "Acerca de"*/
+.acercade-contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: #010101;
+}
+
+.img-acercade{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.item-texto{
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/*Media Queries - AcercaDe... */
+@media (max-width: 768px) {
+    .acercade-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Botones y estilos*/
+.botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.btn-index, .btn-contacto{
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    margin: 2rem 1rem;
+}
+/*Fin de la edición para los botones*/
+/*Diseño para la página de Contacto y su formulario*/
+.contenedor-formulario{/*Cambiamos la dirección y el diseño del formulario*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.formulario{
+    margin: 1rem 2.5rem;
+}
+.form-grupo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    
+}
+.form-label{
+    color: #ffffff;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+.form-input{
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #9a9a9a;
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+.formulario-imagen{ /*Agregamos una imagen a un lado del formulario*/
+    background-image: url(/img/Logo/formulario-logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+/*Media Queries para el formulario*/
+@media (max-width: 768px) {
+    .contenedor-formulario{
+        display: block;
+    }
+    .form-grupo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1rem 2rem;
+    }
+    .formulario-imagen{ /*Cuando la imagen llega a cierta resolución, desaparece la imagen*/
+        background-image: none;
+    }
+}
+
+.contacto-redes-sociales{
+    background-color: #4f4f4f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.redes-sociales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.redes-sociales-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0.1rem 0;
+}
+.iconos{
+    max-width: 2rem;
+}
+
+/*Página de Error 404*/
+.contenedor-error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.img-error{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+/*Fin de la edición para la página de error 404*/

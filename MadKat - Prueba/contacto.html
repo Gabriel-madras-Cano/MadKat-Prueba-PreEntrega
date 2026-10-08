@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/stylesGenerales.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo/madkat-logo-icon.jpeg">
+    <title>Contacto - MadKat</title>
+</head>
+<body>
+    <header>
+        <div class="header-contenedor">
+            <h1 class="metal-mania-title title"><a href="index.html">MadKat</a></h1>
+            <div class="nav">
+                <a class="nav-enlaces" href="index.html">Home...</a>
+                <a class="nav-enlaces" href="acercade.html">Acerca de...</a>
+                <a class="nav-enlaces activo" href="contacto.html">Contacto...</a>
+            </div>
+        </div>
+
+    </header>
+    
+    <main>
+        <h2 class="subtitle texto">Contacta con nosotros...</h2>
+        <p class="texto">Para pedidos, consultas o reclamos, rellene el siguiente formulario por favor.</p>
+        <!-- Formulario de contacto -->
+        <div class="contenedor-formulario">
+            <form class="formulario">
+                <div class="form-grupo">
+                    <label for="nombre" class="form-label texto">Nombre y Apellido:</label>
+                    <input class="form-input" type="text" minlength="2" maxlength="50" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="email" class="form-label texto">Email:</label>
+                    <input class="form-input" type="email" placeholder="ejemplo@correo.com" minlength="5" maxlength="100" id="email" name="email" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="telefono" class="form-label texto">Teléfono:</label>
+                    <input class="form-input" type="tel" pattern="[0-9+]*" title="Solo se permiten números y el signo +" minlength="10" maxlength="15" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="direccion" class="form-label texto">Dirección:</label>
+                    <input class="form-input" type="text" minlength="5" maxlength="100" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="asunto" class="form-label texto">Tipo de Consulta:</label>
+                    <select class="form-input" id="asunto" name="asunto" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="pedido">Pedido</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="reclamo">Reclamo</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label for="mensaje" class="form-label texto">Mensaje:</label>
+                    <textarea class="form-input" id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="200" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-contacto">Enviar mensaje</button>
+            </form>
+            <div class="formulario-imagen">
+            </div>
+        </div>
+        <!-- Fin del formulario de contacto -->
+        <!-- Redes sociales -->
+        <div class="contacto-redes-sociales">
+            <p class="texto">No olvides seguirnos en nuestras redes sociales:</p>
+            <ul class="redes-sociales">
+                <li class="redes-sociales-item"><img src="./img/Iconos-redes sociales/facebook.png" class="iconos" alt="Facebook"><a href="https://www.instagram.com/madkatstore/?hl=es" target="_blank" class="texto">Facebook</a></li>
+                <li class="redes-sociales-item"><img src="./img/Iconos-redes sociales/X (twitter).png" class="iconos" alt="Twitter"><a href="https://www.instagram.com/madkatstore/?hl=es" target="_blank" class="texto">X (Twitter)</a></li>
+                <li class="redes-sociales-item"><img src="./img/Iconos-redes sociales/instagram.png" class="iconos" alt="Instagram"><a href="https://www.instagram.com/madkatstore/?hl=es" target="_blank" class="texto">Instagram</a></li>
+                <li class="redes-sociales-item"><img src="./img/Iconos-redes sociales/youtube.png" class="iconos" alt="YouTube"><a href="https://www.youtube.com/@elrubius" target="_blank" class="texto">YouTube</a></li>
+            </ul>
+        </div>
+        <!-- Fin de las redes sociales -->
+         <!-- Línea divisora y botones -->
+        <div class="linea">
+        </div>
+        <div class="botones">
+            <a class="btn btn-index" href="index.html">Volver a Inicio</a>
+            <a class="btn btn-index" href="acercade.html">Sobre Nosotros</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 MadKat. Todos los derechos reservados. Gabriel Aquino Cano...</p>
+    </footer>
+</body>
+</html>
